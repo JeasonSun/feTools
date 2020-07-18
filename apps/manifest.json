@@ -1,0 +1,16 @@
+{
+    "name":"WEB前端工具(FeTools)",
+    "version":"0.0.1.20200717",
+    "manifest_version": 2,
+    "description": "web前端工具",
+    "icons":{
+        "16": "static/img/icon.png",
+        "48": "static/img/icon.png",
+        "128": "static/img/icon.png"
+    },
+    "browser_action": {
+        "default_icon":"static/img/icon.png",
+        "default_title":"WEB前端助手",
+        "default_popup":"popup/index.html"
+    }
+}

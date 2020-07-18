@@ -1,0 +1,23 @@
+{
+  "name": "fetools",
+  "version": "0.0.1",
+  "description": "fe feTools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeasonSun/feTools.git"
+  },
+  "keywords": [
+    "fe",
+    "feTools"
+  ],
+  "author": "mojie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JeasonSun/feTools/issues"
+  },
+  "homepage": "https://github.com/JeasonSun/feTools#readme"
+}
