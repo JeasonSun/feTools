@@ -11,22 +11,28 @@
     "type": "git",
     "url": "git+https://github.com/JeasonSun/feTools.git"
   },
-  "keywords": [
-    "fe",
-    "feTools"
-  ],
+  "keywords": ["fe", "feTools"],
   "author": "mojie",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JeasonSun/feTools/issues"
   },
   "homepage": "https://github.com/JeasonSun/feTools#readme",
+  "standard": {
+    "ignore": "apps/static/vendor",
+    "globals":{
+      "chrome":true
+    }
+  },
   "dependencies": {},
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-copy": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-jsonminify": "^1.1.0",
     "gulp-less": "^4.0.1",
+    "gulp-uglify-es": "^2.0.0",
     "gulp-uglifycss": "^1.1.0"
   }
 }

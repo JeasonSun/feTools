@@ -1,51 +1,38 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="zh-CN">
-<head>
+  <head>
     <title>FeTools-开发者工具</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./index.css">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./index.css" />
     <script type="text/javascript" src="../static/vendor/vue/vue.js"></script>
-</head>
+  </head>
 
-<body class="fe-popup__page">
-    <div class="fe-popup__container">
-        <div class="fe-popup__header">
-            <span>FeTools-开发者工具</span>
-            <i class="icon-setting"></i>
+  <body class="fe-popup__page">
+    <div class="fe-popup__container" id="popup-pageContainer">
+      <div class="fe-popup__header">
+        <span>FeTools-开发者工具</span>
+        <i class="icon-setting"></i>
+      </div>
+      <div class="fe-popup__category">
+        <div class="fe-popup__category-title">
+          常用工具
         </div>
-        <div class="fe-popup__category">
-            <div class="fe-popup__category-title">
-                常用工具
+        <div class="fe-popup__grid">
+          <div class="fe-popup__grid-item" @click="runTool('json_format',1)">
+            <div class="fe-popup__item-icon">
+              <span class="icon icon-json"></span>
             </div>
-            <div class="fe-popup__grid">
-                <div class="fe-popup__grid-item">
-                    <div class="fe-popup__item-icon">
-                        <span class="icon icon-json"></span>
-                    </div>
-                    <div class="fe-popup__item-text">JSON美化工具</div>
-                </div>
-                <div class="fe-popup__grid-item">
-                    <div class="fe-popup__item-icon">
-                        <span class="icon icon-json"></span>
-                    </div>
-                    <div class="fe-popup__item-text">JSON美化工具</div>
-                </div>
-                <div class="fe-popup__grid-item">
-                    <div class="fe-popup__item-icon">
-                        <span class="icon icon-json"></span>
-                    </div>
-                    <div class="fe-popup__item-text">JSON美化工具</div>
-                </div>
-                <div class="fe-popup__grid-item">
-                    <div class="fe-popup__item-icon">
-                        <span class="icon icon-json"></span>
-                    </div>
-                    <div class="fe-popup__item-text">JSON美化工具</div>
-                </div>
+            <div class="fe-popup__item-text">JSON美化工具</div>
+          </div>
+          <div class="fe-popup__grid-item" @click="runTool('json_test',1)">
+            <div class="fe-popup__item-icon">
+              <span class="icon icon-json"></span>
             </div>
+            <div class="fe-popup__item-text">JSON测试</div>
+          </div>
         </div>
-        
+      </div>
     </div>
-</body>
-
+    <script src="index.js" type="module"></script>
+  </body>
 </html>

@@ -1,22 +1,23 @@
 {
-    "name":"开发者工具(FeTools)",
-    "version":"0.0.1.20200717",
-    "manifest_version": 2,
-    "description": "FeTools-开发者工具",
-    "icons":{
-        "16": "static/img/icon.png",
-        "48": "static/img/icon.png",
-        "128": "static/img/icon.png"
-    },
-    "browser_action": {
-        "default_icon":"static/img/icon.png",
-        "default_title":"FeTools-开发者工具",
-        "default_popup":"popup/index.html"
-    },
-    "background":{
-        "persistent":true,
-        "scripts":[
-            "background/index.js"
-        ]
-    }
+  "name": "开发者工具(FeTools)",
+  "version": "0.0.1.20200721",
+  "manifest_version": 2,
+  "description": "FeTools-开发者工具",
+  "icons": {
+    "16": "static/img/icon.png",
+    "48": "static/img/icon.png",
+    "128": "static/img/icon.png"
+  },
+  "browser_action": {
+    "default_icon": "static/img/icon.png",
+    "default_title": "FeTools-开发者工具",
+    "default_popup": "popup/index.html"
+  },
+  "background": {
+    "persistent": true,
+    "page": "background/index.html"
+  },
+  "permissions": ["tabs", "activeTab", "<all_urls>"],
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
