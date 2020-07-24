@@ -4,33 +4,40 @@
     <title>FeTools-开发者工具</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="/static/css/icon.css" />
     <script type="text/javascript" src="../static/vendor/vue/vue.js"></script>
   </head>
 
   <body class="fe-popup__page">
     <div class="fe-popup__container" id="popup-pageContainer">
       <div class="fe-popup__header">
-        <span>FeTools-开发者工具</span>
+        <span>
+          FeTools-开发者工具
+        </span>
         <i class="icon-setting"></i>
       </div>
-      <div class="fe-popup__category">
-        <div class="fe-popup__category-title">
-          常用工具
-        </div>
-        <div class="fe-popup__grid">
-          <div class="fe-popup__grid-item" @click="runTool('json_format',1)">
-            <div class="fe-popup__item-icon">
-              <span class="icon icon-json"></span>
-            </div>
-            <div class="fe-popup__item-text">JSON美化工具</div>
+      <div class="fe-popup__category-container">
+        <div class="fe-popup__category" v-for="(group, index) in installedTools" :key="group.name">
+          <div class="fe-popup__category-title" data-group-name="group.name" data-group-id="group.id">
+            {{group.desc}}
           </div>
-          <div class="fe-popup__grid-item" @click="runTool('json_test',1)">
-            <div class="fe-popup__item-icon">
-              <span class="icon icon-json"></span>
+          <div class="fe-popup__grid">
+            <div class="fe-popup__grid-item" @click="runTool(tool)" v-for="(tool, index) in group.tools"
+              :key="tool.name">
+              <div class="fe-popup__item-icon">
+                <span :class="['icon','icon-'+tool.icon]"></span>
+              </div>
+              <div class="fe-popup__item-text">{{tool.desc}}</div>
             </div>
-            <div class="fe-popup__item-text">JSON测试</div>
           </div>
         </div>
+      </div>
+      <div class="fe-popup__footer">
+        <!-- <div class="fe-popup__icon-bar">
+          <i class="icon icon-github" title="github"></i>
+          <i class="icon icon-version" title="版本号：{{manifest.version}}"></i>
+          <i class="icon icon-feedback" title="反馈"></i>
+        </div> -->
       </div>
     </div>
     <script src="index.js" type="module"></script>

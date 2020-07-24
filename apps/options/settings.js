@@ -1,7 +1,10 @@
+import toolsInfo from './tools.js'
 // 所有配置项
 const optionItems = []
 
 const menuOptions = {}
+
+// 数据库维护两个表， group  tools
 
 const Settings = (() => {
   /**
@@ -25,9 +28,33 @@ const Settings = (() => {
     return optionItems.concat(Object.keys(menuOptions))
   }
 
+  /**
+   * 获取所有工具的列表
+   */
+  function _getAllTools () {
+    return toolsInfo
+  }
+
+  /**
+   * 获取已经安装的工具列表，从所有工具列表中过滤出已经安装的
+   */
+  function _getInstalledTools (callback) {
+    const installedGroup = toolsInfo.map(group => {
+      const { tools, ...rest} = group;
+      const installedTools = tools.filter(tool => tool.installed)
+      return {
+        ...rest,
+        tools: installedTools
+      }
+    })
+    callback && callback(installedGroup)
+  }
+
   return {
     getOptsFromBgPage: _getOptsFromBgPage,
-    getAllOpts: _getAllOpts
+    getAllOpts: _getAllOpts,
+    getAllTools: _getAllTools,
+    getInstalledTools: _getInstalledTools
   }
 })()
 

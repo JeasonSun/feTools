@@ -5,7 +5,6 @@
     margin: 0;
     width: 320px;
     background: #f2f2f2;
-    padding-bottom: 10px;
 }
 
 .fe-popup__container {
@@ -29,7 +28,6 @@
     display: block;
     width: 20px;
     height: 20px;
-    background: url(./imgs/icon-setting.png) no-repeat;
     background-size: contain;
     position: absolute;
     top: 10px;
@@ -37,12 +35,30 @@
     cursor: pointer;
 }
 
+.fe-popup__footer .fe-popup__icon-bar {
+    text-align: center;
+}
+
+.fe-popup__icon-bar .icon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+
 
 .fe-popup__category {
     border-radius: 4px;
     background-color: #ffffff;
+    margin-bottom: 10px;
 }
 
+.fe-popup__category-container:last-of-type{
+    margin-bottom: 0;
+}
 .fe-popup__category-title {
     height: 40px;
     line-height: 40px;
@@ -79,20 +95,12 @@
     cursor: pointer;
 }
 
-.fe-popup__item-icon {
-    /* height: ; */
-}
-
 .fe-popup__item-icon .icon {
     display: inline-block;
     width: 25px;
     height: 25px;
     background-position: center center;
     background-size: cover;
-}
-
-.fe-popup__item-icon .icon.icon-json {
-    background-image: url(./imgs/icon-json.png);
 }
 
 .fe-popup__item-text {

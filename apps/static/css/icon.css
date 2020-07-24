@@ -1,0 +1,23 @@
+.icon-setting {
+    background-image: url(/static/img/icon-setting.png);
+}
+
+.icon-json {
+    background-image: url(/static/img/icon-json.png);
+}
+
+.icon-test {
+    background-image: url(/static/img/icon-test.png);
+}
+
+.icon-github {
+    background-image: url(/static/img/icon-github.png);
+}
+
+.icon-feedback {
+    background-image: url(/static/img/icon-feedback.png);
+}
+
+.icon-version {
+    background-image: url(/static/img/icon-version.png);
+}
